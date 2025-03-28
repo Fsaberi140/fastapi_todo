@@ -14,3 +14,7 @@ class TodoCreate(TodoBase):
 
 class TodoResponse(TodoBase):
     id: str  # این کلاس پاسخ API را با id برمی‌گرداند
+
+
+# توضیحات
+# https://chatgpt.com/c/67e2ed1a-a520-8006-9803-2e927285af57

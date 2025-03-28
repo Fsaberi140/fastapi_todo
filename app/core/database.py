@@ -10,3 +10,6 @@ MONGO_URI = os.getenv("MONGO_URI")  # خواندن URL دیتابیس از .env
 client = AsyncIOMotorClient(MONGO_URI)
 database = client.todo_database
 todo_collection = database.get_collection("todos")
+
+# توضیحات
+# https://chatgpt.com/c/67e2ed1a-a520-8006-9803-2e927285af57
