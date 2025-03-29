@@ -26,9 +26,9 @@ async def create_todo(todo: TodoCreate):
 
 # read
 # خواندن همه تسک ها
-@router.get('/', response_model=TodoResponse)
+@router.get("/", response_model=list[TodoResponse])
 async def get_all_todos():
-    todos=[]
+    todos = []
     async for todo in todo_collection.find():
         todos.append(TodoResponse(**todo, id=str(todo["_id"])))
     return todos

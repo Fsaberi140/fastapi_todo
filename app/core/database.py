@@ -9,7 +9,10 @@ MONGO_URI = os.getenv("MONGO_URI")  # خواندن URL دیتابیس از .env
 # ایجاد کلاینت MongoDB
 client = AsyncIOMotorClient(MONGO_URI)
 database = client.todo_database
-todo_collection = database.get_collection("todos")
+
+todo_collection = database.get_collection("todos")  #کلکسیون todo در دیتابیس
+user_collection = database.users  # کلکسیون کاربران در دیتابیس
+
 
 # توضیحات
 # https://chatgpt.com/c/67e2ed1a-a520-8006-9803-2e927285af57
